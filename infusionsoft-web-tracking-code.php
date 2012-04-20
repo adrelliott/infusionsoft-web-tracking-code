@@ -18,6 +18,8 @@ function inf_web_tracking_code() {
 }
 
 function inf_web_tracking_settings() {
+	register_setting('inf-web-tracking', 'inf-web-tracking-appname');
+	register_setting('inf-web-tracking', 'inf-web-tracking-code');
 }
 
 if(is_admin()) {
