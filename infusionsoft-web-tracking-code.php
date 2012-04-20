@@ -15,6 +15,14 @@ function inf_web_tracking_settings_page() {
 }
 
 function inf_web_tracking_code() {	
+	if(!is_user_logged_in()) {
+		$appname = get_option('inf-web-tracking-appname');
+		$code = get_option('inf-web-tracking-code');
+	
+		if($appname && $code) { ?>
+			<script type="text/javascript" src="https://<?php echo $appname; ?>.infusionsoft.com/app/webTracking/getTrackingCode?trackingId=<?php echo $code ?>"></script>
+		<?php }
+	}
 }
 
 function inf_web_tracking_settings() {
