@@ -7,6 +7,16 @@ Version: 1.0
 Author URI: http://mediajitsu.com/
 */
 
+function inf_web_tracking_menu() {
+}
 
+function inf_web_tracking_settings_page() {
+}
+
+function inf_web_tracking_code() {	
+}
+
+function inf_web_tracking_settings() {
+}
 
 ?>
