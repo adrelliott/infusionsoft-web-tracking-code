@@ -11,8 +11,30 @@ function inf_web_tracking_menu() {
 	add_menu_page('Infusionsoft Web Tracking', 'Infusionsoft Web Tracking', 'administrator', __FILE__, 'inf_web_tracking_settings_page');
 }
 
-function inf_web_tracking_settings_page() {
-}
+function inf_web_tracking_settings_page() { ?>
+	<div class="wrap">
+		<h2>Infusionsoft® Web Tracking Code Settings</h2>
+		<form method="post" action="options.php">
+			<?php settings_fields('inf-web-tracking'); ?>
+			<?php do_settings_sections('inf-web-tracking'); ?>
+			<p>You can find your Web Tracking Code inside your Infusionsoft Application under <strong>Marketing</strong> &gt; <strong>Web Analytics</strong> &gt; <strong>Get Tracking Code</strong>.</p>
+			<img src="<?php echo plugin_dir_url(__FILE__)."/web-tracking-code-example.png"; ?>" alt="" />
+			<table class="form-table">
+				<tr valign="top">
+					<th scope="row">Infusionsoft App Name:</th>
+					<td><input type="text" name="inf-web-tracking-appname" value="<?php echo get_option('inf-web-tracking-appname'); ?>" />.infusionsoft.com</td>
+				</tr>
+				<tr valign="top">
+					<th scope="row">Web Tracking Code:</th>
+					<td><input type="text" name="inf-web-tracking-code" value="<?php echo get_option('inf-web-tracking-code'); ?>" style="width: 300px;" /></td>
+				</tr>
+			</table>
+			<p class="submit">
+				<input type="submit" class="button-primary" value="<?php _e('Save Changes') ?>" />
+			</p>
+		</form>
+	</div>
+<? }
 
 function inf_web_tracking_code() {	
 	if(!is_user_logged_in()) {
