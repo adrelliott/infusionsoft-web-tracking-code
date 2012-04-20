@@ -8,6 +8,7 @@ Author URI: http://mediajitsu.com/
 */
 
 function inf_web_tracking_menu() {
+	add_menu_page('Infusionsoft Web Tracking', 'Infusionsoft Web Tracking', 'administrator', __FILE__, 'inf_web_tracking_settings_page');
 }
 
 function inf_web_tracking_settings_page() {
