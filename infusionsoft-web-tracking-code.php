@@ -20,4 +20,11 @@ function inf_web_tracking_code() {
 function inf_web_tracking_settings() {
 }
 
+if(is_admin()) {
+	add_action('admin_menu', 'inf_web_tracking_menu');
+	add_action('admin_init', 'inf_web_tracking_settings');
+} else {
+	add_action('wp_footer', 'inf_web_tracking_code');
+}
+
 ?>
