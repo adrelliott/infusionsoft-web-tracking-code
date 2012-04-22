@@ -1,10 +1,12 @@
 === Plugin Name ===
 Contributors: mediajitsu
+Donate link: http://mediajitsu.com/
 Tags: infusionsoft, analytics, web tracking code, marketing automation
 Requires at least: 2.7.0
 Tested up to: 3.3.1
+Stable tag: trunk
 
-This plugin provides a simple method for Infusionsoft® users to add the Spring Release's new Web Analytics tracking code to their WordPress-powered site.
+Simple interface to insert Infusionsoft's Web Tracking Code to your Wordpress site.
 
 == Description ==
 
